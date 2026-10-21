@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block contenu %}
+<div class="accueil">
+  <section class="accueil-texte">
+    <div class="surtitre">Étude à l'aveugle · {{ total }} paires de textes</div>
+    <h1>Quel texte enverriez-vous à votre client ?</h1>
+    <p class="chapo">Une entreprise de cybersécurité envoie chaque mois à ses clients un rapport sur l'état de leur parc
+      informatique. Pour chaque partie du rapport, deux rédactions ont été produites. Votre avis permet de savoir laquelle
+      est la plus claire et la plus utile.</p>
+
+    <ol class="deroule">
+      <li><span class="deroule-num">1</span><div><strong>Lisez deux textes</strong> qui décrivent la même situation, pour le
+        même client et le même mois.</div></li>
+      <li><span class="deroule-num">2</span><div><strong>Notez chacun de 1 à 5</strong> : sa clarté, et son utilité pour
+        prendre une décision.</div></li>
+      <li><span class="deroule-num">3</span><div><strong>Choisissez celui que vous enverriez</strong>, ou indiquez qu'ils se
+        valent.</div></li>
+    </ol>
+
+    <ul class="faits">
+      <li><strong>Environ 2 minutes</strong> par paire. Vous pouvez vous arrêter à tout moment et reprendre plus tard avec
+        le même navigateur.</li>
+      <li><strong>Aucune connaissance technique particulière</strong> n'est requise : jugez en lecteur.</li>
+      <li><strong>Anonyme.</strong> Aucun compte, aucune adresse e-mail. Seuls votre profil et vos notes sont enregistrés.</li>
+    </ul>
+  </section>
+
+  <form method="post" action="/commencer" class="carte accueil-form">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <h2>Participer</h2>
+    {% if erreur %}<p class="message erreur" role="alert">{{ erreur }}</p>{% endif %}
+
+    {% if avec_code %}
+    <div class="champ">
+      <label for="code">Code d'accès</label>
+      <input type="text" id="code" name="code" autocomplete="off" required autocapitalize="off" spellcheck="false">
+      <p class="aide">Indiqué dans le message qui vous a transmis ce lien.</p>
+    </div>
+    {% endif %}
+
+    <div class="champ">
+      <label for="pseudo">Prénom ou pseudonyme <span class="aide">facultatif</span></label>
+      <input type="text" id="pseudo" name="pseudo" maxlength="40" value="{{ saisie.pseudo or '' }}" autocomplete="nickname">
+    </div>
+
+    <fieldset class="champ profils">
+      <legend>Votre profil</legend>
+      {% for cle, libelle in PROFILS.items() %}
+      <label class="choix"><input type="radio" name="profil" value="{{ cle }}" required {{ 'checked' if saisie.profil == cle }}>
+        <span>{{ libelle }}</span></label>
+      {% endfor %}
+    </fieldset>
+
+    <div class="champ">
+      <label for="experience">Années d'expérience <span class="aide">facultatif</span></label>
+      <select id="experience" name="experience">
+        <option value="">—</option>
+        {% for cle, libelle in EXPERIENCES.items() %}<option value="{{ cle }}" {{ 'selected' if saisie.experience == cle }}>{{ libelle }}</option>{% endfor %}
+      </select>
+    </div>
+
+    <label class="case"><input type="checkbox" name="accord" value="1" required>
+      <span>J'accepte que mes réponses, anonymes, soient utilisées pour un mémoire de master.</span></label>
+
+    <button class="bouton fleche plein" type="submit">Commencer</button>
+  </form>
+</div>
+{% endblock %}

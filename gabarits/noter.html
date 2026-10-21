@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block titre %}Paire {{ faites + 1 }} sur {{ total }} · Lisibilité des rapports de sécurité{% endblock %}
+{% block bandeau %}
+{% set pourcent = ((faites / total) * 100) | round | int %}
+<div class="bandeau-avancement" role="group" aria-label="Avancement">
+  <span class="mono"><strong>{{ faites }}</strong> / {{ total }}</span>
+  <div class="nt-barre" role="progressbar" aria-valuemin="0" aria-valuemax="{{ total }}" aria-valuenow="{{ faites }}"
+       aria-label="{{ faites }} paires notées sur {{ total }}"><i style="width: {{ pourcent }}%"></i></div>
+</div>
+{% endblock %}
+{% block contenu %}
+<div class="notation">
+
+{% if erreur %}<p class="message erreur" role="alert">{{ erreur }}</p>{% endif %}
+
+<details class="nt-consignes carte" {% if faites == 0 %}open{% endif %}>
+  <summary><span>Comment noter</span><span class="aide">environ 2 minutes par paire</span></summary>
+  <ol>
+    <li><strong>Lisez les deux textes</strong> comme le ferait le directeur du client : ils décrivent la même situation.</li>
+    <li><strong>Notez chaque texte</strong> de 1 à 5 : sa clarté, et son utilité pour décider quoi faire.</li>
+    <li><strong>Choisissez celui que vous enverriez</strong> au client, ou indiquez qu'ils se valent.</li>
+  </ol>
+  <p class="aide">Les deux textes sont présentés dans un ordre qui varie : jugez uniquement ce que vous lisez. Une paire
+    enregistrée ne peut plus être modifiée. Vous pouvez fermer la page à tout moment et reprendre plus tard.</p>
+</details>
+
+<form method="post" action="/noter/{{ paire.id }}" class="nt-paire" id="nt-formulaire" novalidate>
+  <input type="hidden" name="csrf" value="{{ csrf }}">
+
+  <div class="nt-contexte">
+    <span class="nt-num">Paire {{ faites + 1 }} sur {{ total }}</span>
+    <span class="etiquette">{{ paire.section }}</span>
+    <span class="nt-client">{{ paire.contexte }}</span>
+  </div>
+
+  <div class="nt-textes">
+    {% for cote, texte in (("A", paire.texte_a), ("B", paire.texte_b)) %}
+    <article class="nt-texte carte" aria-labelledby="titre-{{ cote }}">
+      <header><span class="nt-lettre" aria-hidden="true">{{ cote }}</span><h2 id="titre-{{ cote }}">Texte {{ cote }}</h2></header>
+      <div class="nt-corps">{{ texte }}</div>
+      <div class="nt-criteres">
+        {% for critere, libelle, bas, haut in (("clarte", "Clarté", "Confus", "Très clair"),
+                                               ("utilite", "Utilité pour décider", "Inutile", "Très utile")) %}
+        <fieldset class="nt-echelle">
+          <legend>{{ libelle }}</legend>
+          <div class="nt-boutons">
+            {% for n in range(1, 6) %}
+            <label><input type="radio" name="{{ critere }}_{{ cote | lower }}" value="{{ n }}" required><span>{{ n }}</span></label>
+            {% endfor %}
+          </div>
+          <div class="nt-bornes" aria-hidden="true"><span>{{ bas }}</span><span>{{ haut }}</span></div>
+        </fieldset>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <section class="nt-choix carte">
+    <fieldset>
+      <legend><h2>Lequel enverriez-vous au client ?</h2></legend>
+      <div class="nt-options">
+        <label><input type="radio" name="preference" value="A" required>
+          <span><b class="nt-lettre" aria-hidden="true">A</b>Le texte A</span></label>
+        <label><input type="radio" name="preference" value="egal">
+          <span><b class="nt-lettre egal" aria-hidden="true">=</b>Ils se valent</span></label>
+        <label><input type="radio" name="preference" value="B">
+          <span><b class="nt-lettre" aria-hidden="true">B</b>Le texte B</span></label>
+      </div>
+    </fieldset>
+    <div class="champ nt-commentaire">
+      <label for="commentaire">Commentaire <span class="aide">facultatif</span></label>
+      <textarea id="commentaire" name="commentaire" maxlength="1000" rows="2"
+                placeholder="Ce qui vous a fait préférer un texte, une erreur repérée, une formulation maladroite…"></textarea>
+    </div>
+  </section>
+
+  <div class="nt-action">
+    <p class="nt-reste" id="nt-reste" aria-live="polite">5 réponses attendues</p>
+    <button class="bouton fleche" type="submit" id="nt-envoyer">Enregistrer et continuer</button>
+  </div>
+</form>
+
+<form method="post" action="/quitter" class="nt-quitter">
+  <input type="hidden" name="csrf" value="{{ csrf }}">
+  <span class="aide">{% if participant.pseudo %}Vous notez en tant que {{ participant.pseudo }}.{% endif %}
+    Ordinateur partagé avec une autre personne ?</span>
+  <button type="submit" class="lien">Laisser la place à un autre participant</button>
+</form>
+</div>
+
+<script>
+(function () {
+  var f = document.getElementById("nt-formulaire"), reste = document.getElementById("nt-reste"),
+      noms = ["clarte_a", "utilite_a", "clarte_b", "utilite_b", "preference"];
+  function manquants() { return noms.filter(function (n) { return !f.querySelector('input[name="' + n + '"]:checked'); }); }
+  function maj() {
+    var m = manquants().length;
+    reste.textContent = m ? (m + (m > 1 ? " réponses restantes" : " réponse restante")) : "Prêt à enregistrer";
+    reste.classList.toggle("pret", !m);
+  }
+  f.addEventListener("change", maj);
+  f.addEventListener("submit", function (e) {
+    var m = manquants();
+    if (m.length) {
+      e.preventDefault();
+      var champ = f.querySelector('input[name="' + m[0] + '"]'), bloc = champ.closest("fieldset");
+      bloc.classList.remove("manque"); void bloc.offsetWidth; bloc.classList.add("manque");
+      bloc.scrollIntoView({ behavior: "smooth", block: "center" });
+      champ.focus({ preventScroll: true });
+      reste.textContent = "Il manque " + (m.length > 1 ? m.length + " réponses" : "une réponse") + " avant d'enregistrer";
+      return;
+    }
+    document.getElementById("nt-envoyer").disabled = true;
+  });
+  maj();
+  window.scrollTo(0, 0);
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,215 @@
+{
+ "lot": "qr2_v3",
+ "paires": [
+  {
+   "id": "d8b6ba95eefc",
+   "section": "Conclusion",
+   "contexte": "Client A · juin 2026",
+   "texte_a": "Au cours de la période du 1er juin 2026 au 30 juin 2026, le niveau de risque reste à 0 points, confirmant un niveau de risque Faible. Le service Kaspersky MDR a supervisé un nombre moyen de 35,0 postes par jour ouvré, avec un pic atteignant 38 postes en un seul jour. Aucun incident MDR n'a été enregistré pendant cette période. Cependant, les exports Kaspersky Security Center relatifs à l'état de la protection, aux menaces détectées et aux vulnérabilités sont manquants. Ces données sont essentielles pour une évaluation complète du niveau de risque et doivent être transmises sans délai.",
+   "texte_b": "Aucun incident de sécurité n'a été confirmé par le service MDR. Le niveau de sécurité est satisfaisant ; la supervision se poursuit. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client A pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information."
+  },
+  {
+   "id": "6a8f96a16fb8",
+   "section": "Supervision MDR",
+   "contexte": "Client A · septembre 2026",
+   "texte_a": "Sur le mois, 25,4 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 27).",
+   "texte_b": "La supervision MDR de Client A a été assurée avec succès pendant la période de 1er septembre 2026 à 30 septembre 2026. Le service Kaspersky MDR a supervisé un total de 25,4 postes par jour ouvré, avec un maximum de 27 postes observés un même jour. Aucun incident MDR n'a été signalé pendant cette période. La couverture MDR n'a pas été mesurée ce mois, mais cela ne reflète pas une absence de supervision. Le système a fonctionné correctement, permettant une supervision efficace de l'infrastructure du client."
+  },
+  {
+   "id": "fe808bed8389",
+   "section": "Conclusion",
+   "contexte": "Client A · avril 2026",
+   "texte_a": "Aucun incident de sécurité n'a été confirmé par le service MDR. Le niveau de sécurité est satisfaisant ; la supervision se poursuit. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client A pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information.",
+   "texte_b": "Le bilan de sécurité pour la période du 1er avril 2026 au 30 avril 2026 est faible en raison de la manque d'informations fournies par le système Kaspersky Security Center. Aucun des exports mensuels demandés n'a été reçu, ce qui rend difficile l'évaluation du niveau de risque. La couverture MDR n'est pas mesurée ce mois, et aucun incident MDR n'a été signalé. Les actions prévues incluent la transmission des exports mensuels KSC pour obtenir des informations complémentaires sur l'état de la protection, les menaces détectées et les vulnérabilités."
+  },
+  {
+   "id": "2a6e78a1006c",
+   "section": "Synthèse",
+   "contexte": "Client A · août 2026",
+   "texte_a": "Au cours de la période du 1er août 2026 au 31 août 2026, la supervision de sécurité du système d'information de Client A a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). En moyenne, 24,5 postes ont transmis leur télémétrie au service MDR chaque jour ouvré. 1 incident de sécurité a été traité par les analystes MDR.",
+   "texte_b": "Au cours de la période du 1er août 2026 au 31 août 2026, le niveau de risque reste faible grâce à la supervision assurée par le service Kaspersky MDR. Le nombre moyen de postes supervisés par jour ouvré est de 24,5, avec un maximum de 34 enregistré un même jour. Un seul incident a été détecté. Cependant, des exports importants de Kaspersky Security Center, notamment sur l'état de la protection, les menaces et les vulnérabilités, n'ont pas été reçus, ce qui nécessite une transmission urgente."
+  },
+  {
+   "id": "826800daa6c8",
+   "section": "Conclusion",
+   "contexte": "Client C · septembre 2026",
+   "texte_a": "Aucun incident de sécurité n'a été confirmé par le service MDR. Le niveau de sécurité est satisfaisant ; la supervision se poursuit. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client C pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information.",
+   "texte_b": "Le bilan de la période de septembre 2026 montre un niveau de risque « Faible » en raison de la supervision assurée par le service Kaspersky MDR. Malgré les export KSC manquants, le nombre moyen de postes supervisés par jour ouvré et le plus grand nombre de postes observé un même jour sont inférieurs à 1. Aucun incident MDR n'a été signalé. Les actions prévues incluent la transmission des exports mensuels KSC. La couverture MDR n'est pas mesurée ce mois. La surveillance continue est essentielle pour maintenir un niveau de risque stable."
+  },
+  {
+   "id": "99dff96eac7c",
+   "section": "Supervision MDR",
+   "contexte": "Client D · septembre 2026",
+   "texte_a": "Sur le mois, 7,9 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 8).",
+   "texte_b": "La supervision est assurée par le service Kaspersky MDR, à partir de la télémétrie envoyée par les postes. Le nombre moyen de postes supervisés par jour ouvré est de 7,9, et le plus grand nombre de postes observé un même jour est de 8. Aucun incident MDR a été signalé sur la période de 1er septembre 2026 à 30 septembre 2026."
+  },
+  {
+   "id": "f4224508c298",
+   "section": "Supervision MDR",
+   "contexte": "Client B · juillet 2026",
+   "texte_a": "Au cours du mois de juillet 2026, le service Kaspersky MDR a supervisé un nombre moyen de 22,0 postes par jour ouvré, avec un pic de 25 postes le même jour. Aucun incident MDR n'a été enregistré, assurant une supervision sans interruption du parc.",
+   "texte_b": "Sur le mois, 22,0 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 25)."
+  },
+  {
+   "id": "10daa40ef603",
+   "section": "Conclusion",
+   "contexte": "Client B · juin 2026",
+   "texte_a": "Le bilan de la période de début le 1er juin 2026 à la fin du mois de juin 2026 est mitigé. Le niveau de risque est « Faible » en raison de la supervision assurée par le service Kaspersky MDR, mais sans export des données « état de la protection », « menaces détectées » et « vulnérabilités » de ce mois. La couverture MDR n'est pas mesurée ce mois. Aucun incident MDR n'a été signalé. Les actions prévues incluent la transmission des exports mensuels KSC pour obtenir des informations complètes sur la protection.",
+   "texte_b": "Aucun incident de sécurité n'a été confirmé par le service MDR. Le niveau de sécurité est satisfaisant ; la supervision se poursuit. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client B pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information."
+  },
+  {
+   "id": "960b515c0369",
+   "section": "Supervision MDR",
+   "contexte": "Client B · septembre 2026",
+   "texte_a": "Sur le mois, 23,3 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 26).",
+   "texte_b": "La supervision MDR de Client B a été assurée avec succès pendant la période de 1er septembre 2026 à 30 septembre 2026. Le service Kaspersky MDR a supervisé un moyen de 23,3 postes par jour ouvré, avec un maximum de 26 postes observés un même jour. Aucun incident MDR n'a été signalé. La couverture MDR n'a pas été mesurée ce mois."
+  },
+  {
+   "id": "fcd9b13d2f33",
+   "section": "État de la protection",
+   "contexte": "Client A · septembre 2026",
+   "texte_a": "Au moment de l'export (23 septembre 2026), la console signale 49 appareils en anomalie : 46 en état critique et 3 en avertissement. La taille totale du parc sera précisée dans le prochain rapport. 15 postes ne communiquent plus avec la console depuis au moins 7 jours : 10 absences probables (moins d'un mois), 5 postes à localiser (un à trois mois). Les bases antivirus de 1 poste connecté ne se mettent pas à jour : c'est le seul cas de bases dépassées qui appelle une correction. Pour 2 autres postes, des bases dépassées s'expliquent par une absence ou une mise à jour en cours.",
+   "texte_b": "46 appareils sont en état critique ou en avertissement, principalement en raison de trois principales causes. Premièrement, 6 appareils ne sont plus administrés par la console, ce qui représente un impact très élevé. Deuxièmement, 34 appareils n'accèdent pas aux serveurs KSN, entraînant un impact élevé. Enfin, 15 appareils ne se sont pas connectés au serveur d'administration depuis longtemps, également avec un impact élevé."
+  },
+  {
+   "id": "1d6c46666d2e",
+   "section": "Conclusion",
+   "contexte": "Client A · août 2026",
+   "texte_a": "Le niveau de sécurité est satisfaisant ; la supervision se poursuit. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client A pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information.",
+   "texte_b": "Le bilan de la période de début le 1er août 2026 et de fin le 31 août 2026 est le suivant : un seul incident MDR a été signalé, un total de 1 incident(s). Le niveau de risque est établi à « Faible » en raison des données partielles disponibles. Les actions prévues pour améliorer la transparence sont : transmettre les exports mensuels Kaspersky Security Center : état de la protection, menaces, vulnérabilités. Il est important de noter que la couverture MDR n'est pas mesurée ce mois."
+  },
+  {
+   "id": "12935b92229b",
+   "section": "Synthèse",
+   "contexte": "Client C · septembre 2026",
+   "texte_a": "La période de surveillance de sécurité de Client C, du 1er septembre 2026 au 30 septembre 2026, a été caractérisée par un niveau de risque « Faible ». Les deux faits les plus importants sont les exportations manquantes de données de sécurité via Kaspersky Security Center, qui n'ont pas été transmises. De plus, le nombre moyen de postes supervisés par jour ouvré est de 1,0 et le plus grand nombre de postes observés un même jour est de 1.",
+   "texte_b": "Au cours de la période du 1er septembre 2026 au 30 septembre 2026, la supervision de sécurité du système d'information de Client C a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). En moyenne, 1,0 postes ont transmis leur télémétrie au service MDR chaque jour ouvré. Aucun incident de sécurité n'a été confirmé par les analystes MDR."
+  },
+  {
+   "id": "a8cc043d83f2",
+   "section": "Synthèse",
+   "contexte": "Client D · octobre 2026",
+   "texte_a": "Au cours de la période du 1er octobre 2026 au 31 octobre 2026, la supervision de sécurité du système d'information de Client D a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). En moyenne, 8,0 postes ont transmis leur télémétrie au service MDR chaque jour ouvré. Aucun incident de sécurité n'a été confirmé par les analystes MDR.",
+   "texte_b": "Au cours de la période du 1er octobre 2026 au 31 octobre 2026, le niveau de risque est classé à 0 points, indiquant un niveau de risque Faible. La supervision des 8,0 postes moyennement supervisés par jour ouvré a été assurée par le service Kaspersky MDR, sans enregistrement d'incidents. Cependant, les exports Kaspersky Security Center relatifs à l'état de la protection, aux menaces détectées et aux vulnérabilités sont manquants, nécessitant une transmission urgente."
+  },
+  {
+   "id": "4ce708af2a0c",
+   "section": "Supervision MDR",
+   "contexte": "Client D · août 2026",
+   "texte_a": "La supervision MDR a été assurée correctement pendant la période de 1er août 2026 à 31 août 2026. Le service Kaspersky MDR a supervisé une moyenne de 1,0 postes par jour ouvré, avec un maximum de 7 postes observés un même jour. Malheureusement, la couverture MDR n'a pas été mesurée ce mois, ce qui rend difficile l'évaluation de la portée de la supervision. Aucun incident MDR n'a été signalé sur la période.",
+   "texte_b": "Sur le mois, 1,0 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 7)."
+  },
+  {
+   "id": "d5555bad3303",
+   "section": "Supervision MDR",
+   "contexte": "Client A · juin 2026",
+   "texte_a": "Au cours de la période du 1er juin au 30 juin 2026, le service Kaspersky MDR a supervisé un nombre moyen de 35,0 postes par jour ouvré, avec un pic de 38 postes le même jour. Aucun incident MDR n'a été enregistré, assurant une supervision sans interruption du parc informatique.",
+   "texte_b": "Sur le mois, 35,0 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 38)."
+  },
+  {
+   "id": "2cb1ddbb0e80",
+   "section": "Synthèse",
+   "contexte": "Client D · juillet 2026",
+   "texte_a": "Au cours de la période du 1er juillet 2026 au 31 juillet 2026, la supervision de sécurité du système d'information de Client D a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). Aucun poste n'a transmis de télémétrie au service MDR sur la période. Aucun incident de sécurité n'a été confirmé par les analystes MDR.",
+   "texte_b": "Au cours de la période du 1er juillet au 31 juillet 2026, la supervision via le service Kaspersky MDR n'a pas été effective, car aucun poste ne lui a transmis de télémétrie. Le niveau de risque est modéré en raison de l'absence de données sur l'état de la protection, les menaces détectées et les vulnérabilités, malgré l'absence d'incidents. Il est recommandé de vérifier le déploiement et la connectivité des agents MDR, et de transmettre les exports mensuels Kaspersky Security Center."
+  },
+  {
+   "id": "a13caa328475",
+   "section": "Synthèse",
+   "contexte": "Client D · septembre 2026",
+   "texte_a": "Au cours de la période du 1er septembre 2026 au 30 septembre 2026, la supervision de sécurité du système d'information de Client D a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). En moyenne, 7,9 postes ont transmis leur télémétrie au service MDR chaque jour ouvré. Aucun incident de sécurité n'a été confirmé par les analystes MDR.",
+   "texte_b": "Au cours de la période du 1er septembre 2026 au 30 septembre 2026, le niveau de risque est classé comme faible, basé sur des données partielles. Le service Kaspersky MDR a supervisé un maximum de 8 postes en un jour ouvré, avec une moyenne de 7,9 postes par jour ouvré. Il n'y a eu aucun incident MDR pendant cette période. Cependant, les exports Kaspersky Security Center relatifs à l'état de la protection, aux menaces détectées et aux vulnérabilités sont manquants, nécessitant une transmission urgente."
+  },
+  {
+   "id": "4ba2b5d6ae67",
+   "section": "Synthèse",
+   "contexte": "Client B · mars 2026",
+   "texte_a": "Au cours de la période du 1er mars 2026 au 31 mars 2026, la supervision de sécurité du système d'information de Client B a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). En moyenne, 19,4 postes ont transmis leur télémétrie au service MDR chaque jour ouvré. Aucun incident de sécurité n'a été confirmé par les analystes MDR.",
+   "texte_b": "La période de surveillance a débuté le 1er mars 2026 et s'est terminée le 31 mars 2026. Les postes supervisés par jour ouvré moyen étaient de 19,4, avec un maximum de 26 postes observés un même jour. Aucun incident MDR n'a été signalé. La transmission des exports KSC « état de la protection », « menaces détectées » et « vulnérabilités » pour le mois en question n'a pas été effectuée. Le niveau de risque est « Faible » en raison des données partielles disponibles."
+  },
+  {
+   "id": "974635e59a88",
+   "section": "Conclusion",
+   "contexte": "Client C · février 2026",
+   "texte_a": "Quelques points d'amélioration subsistent ; leur traitement permettra de renforcer durablement le niveau de sécurité. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client C pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information.",
+   "texte_b": "Au cours de la période du 1er février au 28 février 2026, la supervision MDR n'a pas été effective, car aucun poste ne remonte de télémétrie au service Kaspersky MDR. Aucun export KSC n'a été transmis, ce qui empêche toute évaluation précise du niveau de protection, des menaces détectées et des vulnérabilités. La couverture MDR n'est pas mesurée ce mois-ci. Le niveau de risque est modéré en raison de l'absence de données, mais reste inquiétant en l'absence de supervision. Les priorités du plan d'action consistent à vérifier le déploiement et la connectivité des agents MDR, et à transmettre les exports KSC mensuels."
+  },
+  {
+   "id": "580145b748be",
+   "section": "Supervision MDR",
+   "contexte": "Client A · octobre 2026",
+   "texte_a": "La supervision MDR de Client A a été assurée avec succès pendant la période de 1er octobre 2026 à 31 octobre 2026. Le service Kaspersky MDR a supervisé un moyen de 28,0 postes par jour ouvré, avec un maximum de 28 postes observés un même jour. Aucun incident MDR n'a été signalé pendant cette période. La couverture MDR n'a pas été mesurée ce mois, mais cela ne reflète pas une absence de supervision.",
+   "texte_b": "Sur le mois, 28,0 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 28)."
+  },
+  {
+   "id": "0b900618159d",
+   "section": "Synthèse",
+   "contexte": "Client A · avril 2026",
+   "texte_a": "Au cours de la période du 1er avril 2026 au 30 avril 2026, la supervision de sécurité du système d'information de Client A a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). En moyenne, 5,7 postes ont transmis leur télémétrie au service MDR chaque jour ouvré. Aucun incident de sécurité n'a été confirmé par les analystes MDR.",
+   "texte_b": "La période de surveillance a débuté le 1er avril 2026 et s'est terminée le 30 avril 2026. Le niveau de risque est « Faible » en raison de données partielles. Les postes supervisés par jour ouvré moyen étaient de 5,7 et le plus grand nombre de postes observé un même jour était de 22. Aucun incident MDR n'a été signalé. Il est recommandé de transmettre les exports mensuels Kaspersky Security Center pour obtenir des informations complètes sur l'état de la protection, les menaces détectées et les vulnérabilités."
+  },
+  {
+   "id": "d945a2e852aa",
+   "section": "Supervision MDR",
+   "contexte": "Client A · mai 2026",
+   "texte_a": "Sur le mois, 31,5 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 37).",
+   "texte_b": "Au cours de la période du 1er mai au 31 mai 2026, le service Kaspersky MDR a supervisé un nombre moyen de 31,5 postes par jour ouvré, avec un pic de 37 postes le même jour. Aucun incident MDR n'a été enregistré, assurant une supervision sans faille."
+  },
+  {
+   "id": "a0e935d6a454",
+   "section": "Synthèse",
+   "contexte": "Client B · septembre 2026",
+   "texte_a": "Au cours de la période du 1er septembre 2026 au 30 septembre 2026, la supervision de sécurité du système d'information de Client B a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). En moyenne, 23,3 postes ont transmis leur télémétrie au service MDR chaque jour ouvré. Aucun incident de sécurité n'a été confirmé par les analystes MDR.",
+   "texte_b": "La période de surveillance a débuté le 1er septembre 2026 et s'est terminée le 30 septembre 2026. Le niveau de risque est « Faible » en raison des données partielles disponibles. Les postes supervisés par jour ouvré moyen étaient de 23,3 et le plus grand nombre de postes observé un même jour était de 26. Aucun incident MDR n'a été signalé sur la période. Les actions prévues pour améliorer la situation incluent la transmission des exports mensuels Kaspersky Security Center : état de la protection, menaces, vulnérabilités."
+  },
+  {
+   "id": "9942b5a918fd",
+   "section": "Supervision MDR",
+   "contexte": "Client A · avril 2026",
+   "texte_a": "Sur le mois, 5,7 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 22).",
+   "texte_b": "Au cours de la période du 1er avril au 30 avril 2026, le service Kaspersky MDR a supervisé un nombre moyen de 5,7 postes par jour ouvré, avec un pic de 22 postes le même jour. Aucun incident MDR n'a été enregistré, assurant une supervision sans faille."
+  },
+  {
+   "id": "10242b745f40",
+   "section": "Conclusion",
+   "contexte": "Client B · février 2026",
+   "texte_a": "Au cours de la période du 1er février au 28 février 2026, la supervision par Kaspersky MDR n'a pas été effective, car aucun poste n'a transmis de télémétrie. Le niveau de risque est modéré en raison de l'absence de données sur l'état de la protection, les menaces et les vulnérabilités. Il est crucial de vérifier le déploiement et la connectivité des agents MDR, et de transmettre les exports mensuels Kaspersky Security Center pour une meilleure visibilité.",
+   "texte_b": "Quelques points d'amélioration subsistent ; leur traitement permettra de renforcer durablement le niveau de sécurité. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client B pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information."
+  },
+  {
+   "id": "db90fc3eae8b",
+   "section": "Conclusion",
+   "contexte": "Client C · juillet 2026",
+   "texte_a": "Au cours de la période du 1er juillet 2026 au 31 juillet 2026, le niveau de risque reste à 0 points, indiquant un niveau faible de menace. Le service Kaspersky MDR a supervisé un nombre moyen de 2,0 postes par jour ouvré, avec un maximum de 2 postes observés un même jour. Aucun incident MDR n'a été enregistré. Cependant, les exports Kaspersky Security Center relatifs à l'état de la protection, aux menaces détectées et aux vulnérabilités sont manquants. Il est recommandé de transmettre ces exports mensuels pour une meilleure visibilité sur la sécurité des postes.",
+   "texte_b": "Aucun incident de sécurité n'a été confirmé par le service MDR. Le niveau de sécurité est satisfaisant ; la supervision se poursuit. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client C pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information."
+  },
+  {
+   "id": "ef7c07267dd4",
+   "section": "Supervision MDR",
+   "contexte": "Client B · mars 2026",
+   "texte_a": "Sur le mois, 19,4 postes en moyenne ont transmis leur télémétrie chaque jour ouvré (maximum 26).",
+   "texte_b": "Au cours du mois de mars 2026, le service Kaspersky MDR a supervisé un nombre moyen de 19,4 postes par jour ouvré, avec un pic de 26 postes simultanément surveillés. Aucun incident MDR n'a été enregistré, assurant une supervision sans interruption de la télémétrie des postes."
+  },
+  {
+   "id": "fecff53cc443",
+   "section": "Conclusion",
+   "contexte": "Client B · février 2026",
+   "texte_a": "Quelques points d'amélioration subsistent ; leur traitement permettra de renforcer durablement le niveau de sécurité. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client B pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information.",
+   "texte_b": "Le bilan de la sécurité pour la période de 1er février 2026 à 28 février 2026 est mitigé, avec un niveau de risque établi à \"Modéré\". La supervision prévue par le service Kaspersky MDR n'a pas été effective, car aucun poste n'a transmis de télémétrie ce mois. Les exports KSC \"état de la protection\", \"menaces détectées\" et \"vulnérabilités\" manquants n'ont pas été transmis, ce qui rend difficile l'évaluation complète du niveau de risque. Les actions prévues incluent la vérification du déploiement et de la connectivité des agents MDR et la transmission des exports mensuels KSC. Il est essentiel de prioriser ces actions pour améliorer la couverture et la qualité de la surveillance."
+  },
+  {
+   "id": "9a2795a9fa3e",
+   "section": "Conclusion",
+   "contexte": "Client B · mars 2026",
+   "texte_a": "Au cours du mois de mars 2026, le niveau de risque reste faible, sans incident MDR relevé. Le service Kaspersky MDR supervise un maximum de 26 postes en une journée, avec un nombre moyen de 19,4 postes par jour ouvré. Cependant, l'absence d'export Kaspersky Security Center sur l'état de la protection, les menaces détectées et les vulnérabilités nécessite l'envoi de ces données pour une évaluation complète. Les priorités du plan d'action consistent à transmettre ces exports mensuels afin de garantir une évaluation précise du niveau de sécurité.",
+   "texte_b": "Aucun incident de sécurité n'a été confirmé par le service MDR. Le niveau de sécurité est satisfaisant ; la supervision se poursuit. Ce rapport sera complété dès réception des exports Kaspersky Security Center manquants.\n\nL'accompagnement se poursuit aux côtés de Client B pour mettre en œuvre ces actions et garantir un niveau de sécurité optimal et durable du système d'information."
+  },
+  {
+   "id": "cc985a211dbb",
+   "section": "Synthèse",
+   "contexte": "Client B · février 2026",
+   "texte_a": "La période de surveillance a débuté le 1er février 2026 et s'est terminée le 28 février 2026. Le niveau de risque est « Modéré » en raison de la supervision prévue par le service Kaspersky MDR, qui n'a pas été effective car aucun poste n'a transmis de télémétrie ce mois. Les exports mensuels Kaspersky Security Center (KSC) « état de la protection », « menaces détectées » et « vulnérabilités » n'ont pas été reçus, ce qui rend difficile l'évaluation de la situation. Aucun incident MDR n'a été signalé. Il est recommandé de vérifier le déploiement et la connectivité des agents MDR et de transmettre les exports mensuels KSC pour une évaluation complète.",
+   "texte_b": "Au cours de la période du 1er février 2026 au 28 février 2026, la supervision de sécurité du système d'information de Client B a été assurée à travers la plateforme Kaspersky Managed Detection and Response (MDR). Aucun poste n'a transmis de télémétrie au service MDR sur la période. Aucun incident de sécurité n'a été confirmé par les analystes MDR."
+  }
+ ]
+}

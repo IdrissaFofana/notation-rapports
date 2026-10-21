@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block titre %}Suivi · Lisibilité des rapports de sécurité{% endblock %}
+{% block contenu %}
+<div class="suivi">
+  <header class="en-tete">
+    <div><div class="surtitre">Réservé à l'auteur</div><h1>Suivi de la notation</h1>
+      <p class="sous-titre">{{ lignes | length }} participant(s) inscrit(s) · {{ total_notes }} note(s) ·
+        {{ rapides }} note(s) données en moins de 20 secondes (écartées à l'analyse).</p></div>
+    <a class="bouton" href="/export?cle={{ cle | urlencode }}">Télécharger les réponses (JSON)</a>
+  </header>
+
+  <section class="indicateurs">
+    {% for k, s in profils.items() %}
+    <div class="indicateur"><div class="valeur">{{ s.participants }}</div>
+      <div class="libelle">{{ PROFILS[k].split(' (')[0] }}</div>
+      <div class="aide">{{ s.complets }} complet(s) · {{ s.notes }} note(s)</div></div>
+    {% endfor %}
+  </section>
+
+  <div class="carte">
+    <h2>Notes par paire</h2>
+    <p class="aide">Du moins noté au plus noté : {{ couverture | join(" · ") }}</p>
+  </div>
+
+  <div class="carte tableau">
+    <table>
+      <thead><tr><th>Pseudonyme</th><th>Profil</th><th>Expérience</th><th>Notes</th><th>Inscrit le</th></tr></thead>
+      <tbody>{% for l in lignes | reverse %}<tr>
+        <td>{{ l.pseudo or "—" }}</td><td>{{ PROFILS[l.profil].split(' (')[0] }}</td>
+        <td>{{ EXPERIENCES.get(l.experience, "—") }}</td><td class="mono">{{ l.notes }} / {{ total }}</td>
+        <td class="mono">{{ l.cree_le.strftime("%d/%m/%Y %H:%M") if l.cree_le else "" }}</td></tr>{% endfor %}</tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

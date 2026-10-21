@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{% block titre %}Lisibilité des rapports de sécurité{% endblock %}</title>
+<link rel="preload" href="/statique/polices/SchibstedGrotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/statique/style.css?v={{ v }}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='8,2 24,2 31,16 24,30 8,30 1,16' fill='%2300507A'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="bandeau">
+  <div class="bandeau-int">
+    <a class="marque" href="/"><span class="marque-hex" aria-hidden="true"></span>
+      <span><strong>Lisibilité des rapports de sécurité</strong><small>Étude · mémoire de master</small></span></a>
+    {% block bandeau %}{% endblock %}
+  </div>
+</header>
+<main>
+{% block contenu %}{% endblock %}
+</main>
+<footer class="pied">
+  <span>Réponses anonymes · utilisées uniquement pour un mémoire de master</span>
+  <span>Textes rédigés à partir de rapports réels, entièrement pseudonymisés</span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titre %}Merci · Lisibilité des rapports de sécurité{% endblock %}
+{% block contenu %}
+<section class="nt-etat carte">
+  <div class="nt-hex ok" aria-hidden="true">✓</div>
+  <h1>Merci{% if participant.pseudo %}, {{ participant.pseudo }}{% endif %} !</h1>
+  <p>Vous avez noté les {{ total }} paires. Vos réponses sont enregistrées ; vous pouvez fermer cette page.</p>
+  <p class="aide">Vous connaissez quelqu'un qui pourrait participer ? Transmettez-lui simplement le lien de cette étude :
+    plus les avis sont nombreux, plus les conclusions sont solides.</p>
+  <form method="post" action="/quitter">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <button type="submit" class="bouton secondaire">Faire participer une autre personne sur cet appareil</button>
+  </form>
+</section>
+{% endblock %}
