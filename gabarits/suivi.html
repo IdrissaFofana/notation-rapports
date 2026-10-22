@@ -5,7 +5,8 @@
   <header class="en-tete">
     <div><div class="surtitre">Réservé à l'auteur</div><h1>Suivi de la notation</h1>
       <p class="sous-titre">{{ lignes | length }} participant(s) inscrit(s) · {{ total_notes }} note(s) ·
-        {{ rapides }} note(s) données en moins de 20 secondes (écartées à l'analyse).</p></div>
+        {{ rapides }} note(s) données plus vite que le temps minimal de lecture (écartées à l'analyse).
+        Les paires de contrôle ne sont pas comptées.</p></div>
     <a class="bouton" href="/export?cle={{ cle | urlencode }}">Télécharger les réponses (JSON)</a>
   </header>
 
@@ -27,7 +28,7 @@
       <thead><tr><th>Pseudonyme</th><th>Profil</th><th>Expérience</th><th>Notes</th><th>Inscrit le</th></tr></thead>
       <tbody>{% for l in lignes | reverse %}<tr>
         <td>{{ l.pseudo or "—" }}</td><td>{{ PROFILS[l.profil].split(' (')[0] }}</td>
-        <td>{{ EXPERIENCES.get(l.experience, "—") }}</td><td class="mono">{{ l.notes }} / {{ total }}</td>
+        <td>{{ EXPERIENCES.get(l.experience, "—") }}</td><td class="mono">{{ l.faites }} / {{ l.prevues or "—" }}</td>
         <td class="mono">{{ l.cree_le.strftime("%d/%m/%Y %H:%M") if l.cree_le else "" }}</td></tr>{% endfor %}</tbody>
     </table>
   </div>

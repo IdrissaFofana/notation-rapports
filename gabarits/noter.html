@@ -11,7 +11,8 @@
 {% block contenu %}
 <div class="notation">
 
-{% if erreur %}<p class="message erreur" role="alert">{{ erreur }}</p>{% endif %}
+{% if erreur %}<p class="message erreur" role="alert">{{ erreur }}</p>
+{% elif enregistree %}<p class="message ok" role="status">✓ Paire enregistrée · encore {{ total - faites }} paire{{ 's' if total - faites > 1 }} à noter</p>{% endif %}
 
 <details class="nt-consignes carte" {% if faites == 0 %}open{% endif %}>
   <summary><span>Comment noter</span><span class="aide">environ 2 minutes par paire</span></summary>
@@ -77,7 +78,7 @@
 
   <div class="nt-action">
     <p class="nt-reste" id="nt-reste" aria-live="polite">5 réponses attendues</p>
-    <button class="bouton fleche" type="submit" id="nt-envoyer">Enregistrer et continuer</button>
+    <button class="bouton fleche" type="submit" id="nt-envoyer" data-lecture="{{ lecture }}">Enregistrer et continuer</button>
   </div>
 </form>
 
@@ -92,16 +93,28 @@
 <script>
 (function () {
   var f = document.getElementById("nt-formulaire"), reste = document.getElementById("nt-reste"),
+      bouton = document.getElementById("nt-envoyer"), libelle = bouton.textContent,
+      fin = Date.now() + 1000 * parseInt(bouton.getAttribute("data-lecture"), 10),
       noms = ["clarte_a", "utilite_a", "clarte_b", "utilite_b", "preference"];
   function manquants() { return noms.filter(function (n) { return !f.querySelector('input[name="' + n + '"]:checked'); }); }
+  function attente() { return Math.max(0, Math.ceil((fin - Date.now()) / 1000)); }
   function maj() {
     var m = manquants().length;
     reste.textContent = m ? (m + (m > 1 ? " réponses restantes" : " réponse restante")) : "Prêt à enregistrer";
     reste.classList.toggle("pret", !m);
   }
+  // Temps minimal de lecture : le bouton s'active une fois écoulé le temps nécessaire pour lire les deux textes
+  function minuterie() {
+    var s = attente();
+    bouton.disabled = s > 0;
+    bouton.classList.toggle("lecture", s > 0);
+    bouton.textContent = s > 0 ? "Temps de lecture · " + s + " s" : libelle;
+    if (s > 0) { setTimeout(minuterie, 500); }
+  }
   f.addEventListener("change", maj);
   f.addEventListener("submit", function (e) {
     var m = manquants();
+    if (attente() > 0) { e.preventDefault(); return; }
     if (m.length) {
       e.preventDefault();
       var champ = f.querySelector('input[name="' + m[0] + '"]'), bloc = champ.closest("fieldset");
@@ -111,9 +124,10 @@
       reste.textContent = "Il manque " + (m.length > 1 ? m.length + " réponses" : "une réponse") + " avant d'enregistrer";
       return;
     }
-    document.getElementById("nt-envoyer").disabled = true;
+    bouton.disabled = true;
   });
   maj();
+  minuterie();
   window.scrollTo(0, 0);
 })();
 </script>

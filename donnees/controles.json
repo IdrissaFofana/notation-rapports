@@ -1,0 +1,10 @@
+{
+ "piege": {
+  "id": "piege",
+  "section": "Menaces",
+  "contexte": "Client E · mai 2026",
+  "faux": "B",
+  "texte_a": "Au cours du mois de mai 2026, 12 menaces ont été détectées sur 4 postes du parc de Client E. Toutes ont été bloquées ou supprimées automatiquement par Kaspersky Endpoint Security : aucune infection active n'a été constatée. La plupart des détections concernent des liens de phishing ouverts depuis la messagerie ; une sensibilisation des utilisateurs concernés est recommandée.",
+  "texte_b": "Au cours du mois de mai 2026, aucune menace n'a été détectée sur le parc de Client E. Les 12 menaces détectées sur 4 postes ont toutes été bloquées, à l'exception du poste le plus touché, qui reste infecté. Le parc est donc entièrement sain et aucune action n'est nécessaire."
+ }
+}

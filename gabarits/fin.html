@@ -4,12 +4,24 @@
 <section class="nt-etat carte">
   <div class="nt-hex ok" aria-hidden="true">✓</div>
   <h1>Merci{% if participant.pseudo %}, {{ participant.pseudo }}{% endif %} !</h1>
-  <p>Vous avez noté les {{ total }} paires. Vos réponses sont enregistrées ; vous pouvez fermer cette page.</p>
-  <p class="aide">Vous connaissez quelqu'un qui pourrait participer ? Transmettez-lui simplement le lien de cette étude :
-    plus les avis sont nombreux, plus les conclusions sont solides.</p>
+  <p>Vos réponses sont enregistrées. Votre lecture attentive est précieuse : c'est elle qui rend les résultats fiables.</p>
+
+  {% if encore %}
+  <div class="fin-encore">
+    <h2>Encore un peu de temps ?</h2>
+    <p class="aide">Vous pouvez noter {{ par_participant }} paires de plus (environ 15 minutes). C'est facultatif, et
+      chaque paire supplémentaire renforce les conclusions.</p>
+    <form method="post" action="/continuer">
+      <input type="hidden" name="csrf" value="{{ csrf }}">
+      <button type="submit" class="bouton fleche">Noter {{ par_participant }} paires de plus</button>
+    </form>
+  </div>
+  {% endif %}
+
+  <p class="aide">Vous connaissez quelqu'un qui pourrait participer ? Transmettez-lui simplement le lien de cette étude.</p>
   <form method="post" action="/quitter">
     <input type="hidden" name="csrf" value="{{ csrf }}">
-    <button type="submit" class="bouton secondaire">Faire participer une autre personne sur cet appareil</button>
+    <button type="submit" class="lien">Faire participer une autre personne sur cet appareil</button>
   </form>
 </section>
 {% endblock %}

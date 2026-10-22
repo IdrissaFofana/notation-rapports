@@ -8,8 +8,20 @@ aucune indication de leur origine, et les notes des participants. Aucune donnée
 
 1. L'accueil : l'étude en trois étapes, puis un court formulaire (code d'accès, pseudonyme facultatif, profil, expérience,
    accord).
-2. Les 30 paires, dans un ordre propre à chacun ; il peut s'arrêter et reprendre plus tard avec le même navigateur.
-3. Un écran de remerciement.
+2. 12 paires (environ 20 minutes) : 10 paires tirées parmi les moins notées, plus 2 paires de contrôle. Il peut
+   s'arrêter et reprendre plus tard avec le même navigateur.
+3. Un écran de remerciement, qui propose 10 paires de plus aux volontaires.
+
+## Qualité des réponses (depuis le 22/10/2026)
+
+- **Temps minimal de lecture** : le bouton « Enregistrer » ne s'active qu'après (mots des deux textes ÷ 6) secondes, au
+  moins 10 s ; le serveur le vérifie aussi.
+- **Paire piège** (5e écran, `donnees/controles.json`) : le texte B se contredit ouvertement. Préférer ce texte, ou juger
+  les deux équivalents, exclut le participant.
+- **Paire répétée** (11e écran) : la 2e paire revient, A et B inversés. Choisir deux fois la même lettre exclut le
+  participant.
+- Les paires de contrôle ne comptent jamais dans les résultats. Les notes antérieures (première vague, 30 paires sans
+  contrôle) sont analysées à part.
 
 Profils : spécialiste de la sécurité, développeur, autre métier de l'informatique, hors informatique. L'analyse est faite
 par profil : H4 se lit sur les spécialistes, les autres groupes donnent un éclairage complémentaire.
@@ -55,8 +67,8 @@ par profil : H4 se lit sur les spécialistes, les autres groupes donnent un écl
    ```
    python gerer.py analyser-h4-en-ligne "C:\chemin\vers\notation-AAAAMMJJ-HHMM.json"
    ```
-   Résultat par profil dans `memoire/donnees/RESULTATS_H4_EN_LIGNE.md`. Les notes données en moins de 20 secondes par
-   paire sont écartées (lecture impossible) et comptées à part.
+   Résultat par vague et par profil dans `memoire/donnees/RESULTATS_H4_EN_LIGNE.md`, avec le nombre de participants
+   exclus par les contrôles et de notes plus rapides que le temps de lecture.
 
 La correspondance entre les textes et leur origine (LLM ou règles) n'existe que sur le poste de l'auteur
 (`plateforme/donnees/recherche/resultats/notation_qr2_v3.json`) : ni le site ni ce dépôt ne la contiennent.

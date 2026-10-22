@@ -2,7 +2,7 @@
 {% block contenu %}
 <div class="accueil">
   <section class="accueil-texte">
-    <div class="surtitre">Étude à l'aveugle · {{ total }} paires de textes</div>
+    <div class="surtitre">Étude à l'aveugle · {{ par_participant + 2 }} paires de textes · environ 20 minutes</div>
     <h1>Quel texte enverriez-vous à votre client ?</h1>
     <p class="chapo">Une entreprise de cybersécurité envoie chaque mois à ses clients un rapport sur l'état de leur parc
       informatique. Pour chaque partie du rapport, deux rédactions ont été produites. Votre avis permet de savoir laquelle
@@ -18,8 +18,8 @@
     </ol>
 
     <ul class="faits">
-      <li><strong>Environ 2 minutes</strong> par paire. Vous pouvez vous arrêter à tout moment et reprendre plus tard avec
-        le même navigateur.</li>
+      <li><strong>{{ par_participant + 2 }} paires, environ 20 minutes.</strong> Prenez le temps de lire : c'est la qualité de
+        votre lecture qui compte. Vous pouvez vous arrêter et reprendre plus tard avec le même navigateur.</li>
       <li><strong>Aucune connaissance technique particulière</strong> n'est requise : jugez en lecteur.</li>
       <li><strong>Anonyme.</strong> Aucun compte, aucune adresse e-mail. Seuls votre profil et vos notes sont enregistrés.</li>
     </ul>
@@ -62,7 +62,7 @@
     <label class="case"><input type="checkbox" name="accord" value="1" required>
       <span>J'accepte que mes réponses, anonymes, soient utilisées pour un mémoire de master.</span></label>
 
-    <button class="bouton fleche plein" type="submit">Commencer</button>
+    <button class="bouton fleche plein" type="submit">Commencer la notation</button>
   </form>
 </div>
 {% endblock %}
